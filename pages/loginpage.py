@@ -1,5 +1,6 @@
 from element_locators.loginpage_elements import LoginElements
 
+
 class LoginPage:
 
     def __init__(self, driver):

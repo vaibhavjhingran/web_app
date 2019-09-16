@@ -3,7 +3,7 @@ from pages.homepage import HomePage
 from tests.test_setup import TestSetup
 
 
-class HomePageTests(unittest.TestCase):
+class HomePageTests(TestSetup):
 
     def test_homepage_icon(self):
         home_icon = HomePage(self.driver)
