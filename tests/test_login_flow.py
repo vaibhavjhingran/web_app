@@ -11,6 +11,7 @@ class LoginTests(TestSetup):
         login.click_login()
         login.enter_username(UserDetails.USERNAME)
         login.enter_password(UserDetails.PASSWORD)
+        self.save_screenshot()
         login.login_user()
 
 

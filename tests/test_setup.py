@@ -1,4 +1,6 @@
 import unittest
+from datetime import datetime
+
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
@@ -23,5 +25,8 @@ class TestSetup(unittest.TestCase):
             print(e)
         finally:
             self.driver.quit()
+
+    def save_screenshot(self):
+        self.driver.save_screenshot('./screenshots/test-' + str(datetime.now()) + '.png')
 
 
