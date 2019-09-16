@@ -33,6 +33,9 @@ To run all tests:
 To run an individual test: 
 `nose2 -v tests.test_login_flow --html-report`
 
+To deactivate virtualenv
+`deactivate`
+
 ## Viewing Reports
 You can view reports at: `/reports` within the repo. The reports are
 in HTML format and can be viewed in any browser of choice.
