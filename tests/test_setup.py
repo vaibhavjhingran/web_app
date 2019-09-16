@@ -1,5 +1,9 @@
 import unittest
 from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class TestSetup(unittest.TestCase):
@@ -11,5 +15,13 @@ class TestSetup(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
+
+    def wait_for(self, element, timeout):
+        try:
+            WebDriverWait(self.driver, timeout).until(EC.presence_of_element_located((By.CSS_SELECTOR, element)))
+        except TimeoutException as e:
+            print(e)
+        finally:
+            self.driver.quit()
 
 
