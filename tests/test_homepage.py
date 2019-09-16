@@ -1,22 +1,22 @@
 import unittest
-from selenium import webdriver
+from pages.homepage import HomePage
+from tests.test_setup import TestSetup
 
 
 class HomePageTests(unittest.TestCase):
 
-    def setUp(self):
-        self.driver = webdriver.Firefox()
-        self.driver.get("https://news.ycombinator.com")
-        self.driver.implicitly_wait(5)
-
     def test_homepage_icon(self):
-        driver = self.driver
-        driver.find_element_by_css_selector("a[href$='news']").click()
-        assert 'Hacker News' in driver.title
+        home_icon = HomePage(self.driver)
+        home_icon.click_home_icon()
+        home_icon.assert_title()
 
-    def tearDown(self):
-        self.driver.quit()
+    def test_all_header_links(self):
+        headers = HomePage(self.driver)
+        headers.click_all_header_links()
 
 
 if __name__ == '__main__':
+    TestSetup.setUp()
+    TestSetup.tearDown()
     unittest.main(verbosity=2)
+
