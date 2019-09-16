@@ -2,3 +2,4 @@
 .idea/
 .DS_Store
 geckodriver.log
+__pycache__
