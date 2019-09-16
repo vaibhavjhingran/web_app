@@ -1,6 +1,5 @@
 import unittest
 from datetime import datetime
-
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
@@ -9,10 +8,13 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 class TestSetup(unittest.TestCase):
+
+    BASE_URL = 'https://news.ycombinator.com/'
+
     def setUp(self):
         self.driver = webdriver.Firefox()
         self.driver.maximize_window()
-        self.driver.get("https://news.ycombinator.com/")
+        self.driver.get(self.BASE_URL)
         self.driver.implicitly_wait(5)
 
     def tearDown(self):
