@@ -11,6 +11,16 @@ a page object model at it's core as a framework design.
  * unittest (xUnit framework for implementing tests)
 
 ## Running Tests
+
+Before running the tests, you may need to install `python 3.7.x` on
+your machine. The simplest way for macs is to use homebrew.
+`brew install python`
+This install `pip` the package installer along with python. Once done
+you can check the installation by typing `python --version` in the
+terminal.
+Additionally, i prefer to alias `python3 as python` which can be done
+in your `bash profile` or `.zshrc` files. All python commands mentioned
+below take advantage of that alias setting.
 To run the tests, you can follow the steps in order:
 
 Move to the repo
@@ -73,8 +83,7 @@ The core folders are listed below with a brief summary:
     * `requirements.txt`: It keeps a simple copy of external python 
     packages or dependencies required to run the tests. It works well
     with `pip`, the python package manager to setup the dependencies.
-    
-    
+        
 ## Additional Design Decisions:
 
 While it was tempting to create a base page within the pages folder
