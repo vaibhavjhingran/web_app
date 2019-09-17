@@ -105,3 +105,31 @@ Also, as the project can grow in tests and scale, we can incorporate
 a steady mix of cross-browser testing by adding a chrome driver and
 internet explorer driver to ensure we cover more relatable user flows
 and real world scenario emulation.
+
+## Reasons for picking the tech stack:
+ * Python: 
+    * less boilerplate code
+    * repl advantage
+    * duck typing
+    * easy of reading the code
+    * robust & active dev community
+    * familiarity with the language
+ 
+ * selenium:
+    * standard api with mature framework and models
+    * multiple language bindings (python, ruby, javascript, java etc.)
+    * can scale on cloud, local or server levels
+    * flexible across iOS & android automation
+    * active community
+    * flexibility to pick test framework based on language binding
+    * open source
+    
+ * unittest:
+    * bundled within python language as a lib
+    * similar to other *Unit frameworks
+    * flexible and easy to setup and use
+ 
+ * nose2
+    * extends unittest capability
+    * test discovery
+    * better html reporting
